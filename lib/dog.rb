@@ -33,9 +33,7 @@ class Dog
     end 
 
     def self.print_all
-        @@all.each do |var|
-            puts var.name
-        end
+        @@all.each {|var| puts var.name}
     end 
     
     def save
