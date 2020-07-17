@@ -1,4 +1,6 @@
-##
+
+## REWORK
+
 ## 1. Create a Dog class that initializes
 ##      with a name and stores each new
 ##      instance of Dog that is instantiated.
@@ -17,9 +19,10 @@
 ## 7. Create a class method #clear_all that
 ##      empties the @@all array.
 
+
 class Dog
 
-    attr_reader :name
+    attr_accessor :name
 
     @@all = []
 
@@ -33,15 +36,14 @@ class Dog
     end 
 
     def self.print_all
-        @@all.each {|var| puts var.name}
+        all.each {|object| puts object.name}
     end 
-    
+
     def save
-        @@all << self
+        self.class.all << self 
     end 
 
     def self.clear_all
-        @@all.clear 
+        all.clear
     end 
-
 end 
